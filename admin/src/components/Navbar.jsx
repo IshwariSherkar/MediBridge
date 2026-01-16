@@ -6,24 +6,7 @@ import { DoctorContext } from "../context/DoctorContext";
 
 const Navbar = () => {
 
-    const { aToken, setAToken } = useContext(AdminContext)
-    const {dToken,setDToken}=useContext(DoctorContext)
     
-    const navigate=useNavigate()
-    
-    const logout = () => {
-        // Clear tokens and localStorage
-        if (aToken) {
-            setAToken('')
-            localStorage.removeItem('aToken')
-        }
-        if (dToken) {
-            setDToken('')
-            localStorage.removeItem('dToken')
-        }
-        // Navigate to login page
-        navigate('/')
-    }
 
     return (
         <div className="flex justify-between items-center px-4 sm:px-10 py-3 border-b bg-white">
